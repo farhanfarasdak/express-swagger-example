@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Swagger Petstore - OpenAPI 3.0",
+    "description": "This is a sample openAPI",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/user": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Return value succesfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 8
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Farhan"
+                    },
+                    "job": {
+                      "type": "string",
+                      "example": "Engineer"
+                    },
+                    "tasks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": [
+                          "coding",
+                          "meeting",
+                          "playing games"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Farhan"
+                  },
+                  "job": {
+                    "type": "string",
+                    "example": "Engineer"
+                  },
+                  "tasks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": [
+                        "coding",
+                        "meeting",
+                        "playing games"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Return value succesfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 8
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Farhan"
+                    },
+                    "job": {
+                      "type": "string",
+                      "example": "Engineer"
+                    },
+                    "tasks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": [
+                          "coding",
+                          "meeting",
+                          "playing games"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/{id}": {
+      "put": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id of the user",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Farhan"
+                  },
+                  "job": {
+                    "type": "string",
+                    "example": "Engineer"
+                  },
+                  "tasks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": [
+                        "coding",
+                        "meeting",
+                        "playing games"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Return value succesfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 8
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Farhan"
+                    },
+                    "job": {
+                      "type": "string",
+                      "example": "Engineer"
+                    },
+                    "tasks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": [
+                          "coding",
+                          "meeting",
+                          "playing games"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
